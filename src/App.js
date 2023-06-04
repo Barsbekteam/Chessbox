@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import './App.scss'
+import axios from "axios";
+import Group from "./Group";
+import Loader from "./Loader";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [test, setTest] = useState([])
+    const [loader, setLoader] = useState(false)
+    const getTest = async () => {
+        try {
+            setLoader(true)
+            const tests = await axios(`https://63f48a6e2213ed989c44ef9c.mockapi.io/test`)
+            const {data} = await tests
+            setTest(data)
+            setLoader(false)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    console.log(test)
+    useEffect(() => {
+        getTest()
+    }, [])
+    return (
+        <div className="container">
+            {loader && <Loader/>}
+
+            <div className="group">
+                {
+                    test.map(el => <Group el={el}/>)
+                }
+            </div>
+        </div>
+    );
+};
 
 export default App;
