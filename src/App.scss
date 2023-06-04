@@ -1,1 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
+body html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.group {
+  margin: 50px 0;
+  border: 1.5px solid #DADADA;
+  width: 1341px;
+  border-radius: 24px;
+
+  &__block {
+    margin-left: 7px;
+    display: flex;
+    justify-content: center;
+    padding: 46px 0 72px;
+    gap: 55px;
+    width: 1323px;
+    height: 150px;
+
+    &--world {
+      h2 {
+        width: 481px;
+        margin-bottom: 18px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 40px;
+        color: #0B090C;
+      }
+
+      p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #0B090C;
+        opacity: 0.6;
+      }
+    }
+
+    &--price {
+      width: 402px;
+
+      p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #3A3A40;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 9px;
+          font-size: 16px;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        p {
+          font-family: 'Inter', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          color: #09090C;
+          opacity: 0.6;
+
+        }
+      }
+    }
+
+    &--registration {
+      width: 275px;
+      height: 150px;
+      border: 1.5px solid #DADADA;
+      border-radius: 24px;
+      position: relative;
+
+      button {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #09090C;
+        text-align: start;
+        cursor: pointer;
+        border: none;
+        margin: 60px 0 0 22px;
+      }
+
+      .star {
+        position: absolute;
+        right: 50%;
+        top: 19px;
+      }
+
+      .stars {
+        position: absolute;
+        right: 48px;
+        top: 34px;
+      }
+
+      .starr {
+        position: absolute;
+        bottom: 23px;
+        right: 65px;
+      }
+    }
+
+    &--ends {
+      h2 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #6C6A6C;
+        margin-bottom: 15px;
+      }
+
+      &__time {
+        display: flex;
+        gap: 10px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 8px;
+          width: 50px;
+          height: 50px;
+          border: 1px solid #DADADA;
+          border-radius: 11px;
+
+          h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            color: #0B090C;
+          }
+
+          span {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #6C6A6C;
+          }
+        }
+      }
+
+      button {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: #F5F5F5;
+        width: 250px;
+        height: 48px;
+        background: #09090C;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 25px;
+      }
+    }
+  }
+}
