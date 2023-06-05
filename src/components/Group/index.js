@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import '../../App.scss'
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
@@ -20,7 +20,6 @@ const Group = () => {
             console.log(e)
         }
     }
-    console.log(f)
     useEffect(() => {
         getCompetition()
     }, [])
