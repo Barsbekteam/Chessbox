@@ -1,36 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.scss'
-import axios from "axios";
-import Group from "./Group";
+import Group from "./components/Group";
+import {Route, Routes} from "react-router";
+import Current from "./components/Current";
+import Navigates from "./components/Nav";
+import Achieve from "./components/Achieve";
+import {useSelector} from "react-redux";
 import Loader from "./Loader";
 
 const App = () => {
-    const [test, setTest] = useState([])
-    const [loader, setLoader] = useState(false)
-    const getTest = async () => {
-        try {
-            setLoader(true)
-            const tests = await axios(`https://63f48a6e2213ed989c44ef9c.mockapi.io/test`)
-            const {data} = await tests
-            setTest(data)
-            setLoader(false)
-        } catch (e) {
-            console.log(e)
-        }
-    }
-    console.log(test)
-    useEffect(() => {
-        getTest()
-    }, [])
+const {loader} = useSelector(state => state.main)
     return (
         <div className="container">
+            <Navigates/>
             {loader && <Loader/>}
-
-            <div className="group">
-                {
-                    test.map(el => <Group el={el}/>)
-                }
-            </div>
+            <Routes>
+                <Route path={'/'} element={<Group/>}/>
+                <Route path={'/current'} element={<Current/>}/>
+                <Route path={'/achieve'} element={<Achieve/>}/>
+            </Routes>
         </div>
     );
 };

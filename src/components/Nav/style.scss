@@ -1,0 +1,26 @@
+.navbar{
+  width: 381px;
+  height: 48px;
+  background: #F2F2F2;
+  border: 1.5px solid #DADADA;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  a{
+    font-weight: 600;
+    font-size: 16px;
+    color: #6C6A6C;
+    padding: 0 5px;
+  }
+  .active{
+    background: #0B090C;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  hr{
+    transform: rotate(90deg);
+    width: 35px;
+  }
+}
