@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.scss'
 import Group from "./components/Group";
 import {Route, Routes} from "react-router";

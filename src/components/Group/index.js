@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {getCompetitions, getLoader} from "../../Store/testReduce";
 import Registration from "./Registration";
-import Loader from "../../Loader";
 
 const Group = () => {
     const {competition, loader, f} = useSelector(s => s.main)

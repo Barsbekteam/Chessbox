@@ -14,7 +14,7 @@ export const testSlice = createSlice({
         },
         getLoader(state, action){
             state.loader = action.payload
-        }
+        },
     }
 })
 
